@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div ng-app="" ng-init="firstName='John';quantity=2;price=5;names=['Jani','Hege','Kai'];
+    mynames=[
+{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]">
+
+        <p>Name: <input type="text" ng-model="firstName"></p>
+        <p>You wrote: {{ firstName }}</p>
+
+        Quantity: <input type="number" ng-model="quantity">
+        Costs: <input type="number" ng-model="price">
+
+        Total in dollar: {{ quantity * price }}
+
+        <ul>
+            <li ng-repeat="x in names">
+                {{x}}
+            </li>
+        </ul>
+
+
+        <ul>
+            <li ng-repeat="x in mynames">
+                {{ x.name + ', ' + x.country }}
+            </li>
+        </ul>
+    </div>
+
+
+    </script>
+</body>
+
+</html>
